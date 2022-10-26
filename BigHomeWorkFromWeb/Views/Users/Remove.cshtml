@@ -1,0 +1,17 @@
+﻿@model UserModel
+
+
+<table class="table">
+
+		<form action="/Users/Remove" method="post">
+			<div>
+			
+					
+					@Html.TextBoxFor(x => x.Id)
+					@Html.ValidationMessageFor(x=>x.Id)
+			
+			<div>
+				<input type="submit" value="удалить " />
+			</div>
+		</form>
+</table>

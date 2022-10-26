@@ -1,0 +1,53 @@
+﻿@model List<UserModel>
+
+
+<table class="table">
+
+	<tr>
+		<th>
+			FirstName
+		</th>
+		<th>
+			LastName
+		</th>
+		<th>
+			Age Name
+		</th>
+		<th>
+			StritName
+		</th>
+		<th>
+			HouseNumber
+		</th>
+		<th>
+			ApertmenNumber
+		</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@item.FirstName
+			</td>
+			<td>
+				@item.LastName
+			</td>
+			<td>
+				@item.Age
+			</td>
+			@if (item.AdressId != null)
+			{
+				<td>
+					@item.Adress.StritName
+				</td>
+				<td>
+					@item.Adress.HouseNumber
+				</td>
+				<td>
+					@item.Adress.ApertmenNumber
+				</td>
+			}
+
+		</tr>
+	}
+</table>

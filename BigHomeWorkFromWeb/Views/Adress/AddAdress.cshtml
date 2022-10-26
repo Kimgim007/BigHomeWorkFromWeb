@@ -1,0 +1,35 @@
+﻿@model AdressModel
+
+
+<table class="table">
+
+		<form action="/Adress/AddAdress" method="post">
+			<div>
+				<p>
+					<div>
+						Enter StritName
+					</div>
+					@Html.TextBoxFor(x => x.StritName)
+					@Html.ValidationMessageFor(x=>x.StritName)
+				</p>
+					<p>
+					<div>
+						Enter HouseNumber
+					</div>
+					@Html.TextBoxFor(x => x.HouseNumber)
+					@Html.ValidationMessageFor(x=>x.HouseNumber)
+				</p>
+						<p>
+					<div>
+						Enter ApertmenNumber
+					</div>
+					@Html.TextBoxFor(x => x.ApertmenNumber)
+					@Html.ValidationMessageFor(x=>x.ApertmenNumber)
+				</p>
+			</div>
+			@Html.HiddenFor(x=>x.Id)
+			<div>
+				<input type="submit" value="Добавить " />
+			</div>
+		</form>
+</table>

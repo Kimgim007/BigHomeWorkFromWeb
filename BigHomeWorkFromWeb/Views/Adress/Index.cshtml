@@ -1,0 +1,32 @@
+﻿@model List<AdressModel>
+
+
+<table class ="table">
+
+	<tr>
+		<th>
+			StritName 
+		</th>
+		<th>
+			HouseNumber 
+		</th>
+		<th>
+			ApertmenNumber 
+		</th>
+	</tr "class = table ">
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@item.StritName
+			</td>
+			<td>
+				@item.HouseNumber
+			</td>
+			<td>
+				@item.ApertmenNumber
+			</td>
+		</tr>
+	}
+
+</table>

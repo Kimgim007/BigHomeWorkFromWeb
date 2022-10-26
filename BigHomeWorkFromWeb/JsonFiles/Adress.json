@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "StritName": "Varshavskay",
+
+    "HouseNumber": 39,
+
+    "ApertmenNumber": 666
+  },
+  {
+    "Id": 2,
+    "StritName": "Leninskay",
+
+    "HouseNumber": 20,
+
+    "ApertmenNumber": 40
+  },
+  {
+    "Id": 3,
+    "StritName": "Pushkinskay",
+
+    "HouseNumber": 55,
+
+    "ApertmenNumber": 70
+  }
+]

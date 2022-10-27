@@ -36,18 +36,18 @@ namespace BigHomeWorkFromWeb.Controllers
             return RedirectToAction("Index", "Home"); ;
         }
 
-        //[HttpGet]
-        //public IActionResult Remove()
-        //{
-        //    UserModel user = new UserModel();
-        //    return View(user);
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> Remove(UserModel userModel)
-        //{
-        //    await UserHelper.Remove(userModel);
+        [HttpGet]
+        public IActionResult Remove()
+        {
+            UserModel user = new UserModel();
+            return View(user);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Remove(UserModel userModel)
+        {
+            await UserHelper.Remove(userModel);
 
-        //    return RedirectToAction("Index", "Home"); ;
-        //}
+            return RedirectToAction("Index", "Home"); ;
+        }
     }
 }

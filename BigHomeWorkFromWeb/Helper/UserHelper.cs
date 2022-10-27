@@ -33,7 +33,7 @@ namespace BigHomeWorkFromWeb.Models
         public async static Task AddUser(UserModel user)
         {
             var users = await GetUsers();
-            using (FileStream fs = new FileStream("JsonFiles/Users.json", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("JsonFiles/Users.json", FileMode.Truncate))
             {
 
                 MaxUserId.maxUserId++;
@@ -45,18 +45,18 @@ namespace BigHomeWorkFromWeb.Models
 
             }
         }
-        //public async static Task Remove(UserModel userModel)
-        //{
-        //    var users = await GetUsers();
-        //    using (FileStream fs = new FileStream("JsonFiles/Users.json", FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write))
-        //    {
+        public async static Task Remove(UserModel userModel)
+        {
+            var users = await GetUsers();
+            using (FileStream fs = new FileStream("JsonFiles/Users.json", FileMode.Truncate))
+            {
 
-               
-        //        users.Remove(users.FirstOrDefault(q=>q.Id == userModel.Id));
 
-        //        await JsonSerializer.SerializeAsync<List<UserModel>>(fs, users);
-          
-        //    }
-        //}
+                users.Remove(users.FirstOrDefault(q => q.Id == userModel.Id));
+
+                await JsonSerializer.SerializeAsync<List<UserModel>>(fs, users);
+
+            }
+        }
     }
 }
